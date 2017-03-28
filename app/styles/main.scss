@@ -12,9 +12,22 @@ $icon-font-path: '../fonts/';
 // import the agency theme
 .logo-wrapper {
   padding: 20px 0 40px 0;
+
+  img {
+    width: 50%;
+
+    @media(min-width:768px) {
+      width:40%;
+    }
+
+    @media(min-width:1024px) {
+      width:32%;
+    }
+  }
+
 }
 
-.intro-wrapper {
+.banner-image {
   border-bottom: 8px solid $brand-primary;
   border-top: 8px solid $brand-primary;
   background-image: url('../images/img-home.jpg');
@@ -22,15 +35,25 @@ $icon-font-path: '../fonts/';
   background-attachment: scroll;
   background-position: center center;
   @include background-cover;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media(min-width:768px) {
+    padding-top:120px;
+    padding-bottom: 120px;
+  }
+}
+
+.intro-wrapper {
   text-align: center;
 
   .intro-text {
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 80px;
 
     .intro-lead-in {
       @include heading-font;
-      color: $white;
+      color: $gray;
       font-size: 22px;
       line-height: 22px;
       margin-bottom: 25px;
@@ -75,7 +98,7 @@ $icon-font-path: '../fonts/';
 
 // services section
 #services {
-  padding: 75px 0;
+  padding: 75px 0 0;
 
   h2.section-heading {
     font-weight: 700;
@@ -91,27 +114,33 @@ $icon-font-path: '../fonts/';
 #portfolio {
   .portfolio-item {
     margin: 0 0 15px;
+    padding-top: 0;
     right: 0;
 
     .portfolio-caption {
       max-width: 400px;
       margin: 0 auto;
       background-color: $brand-secondary;
+      background: linear-gradient($brand-secondary, lighten($brand-secondary, 15%));
       text-align: center;
       padding: 25px;
       min-height: 90px;
+      border-radius: 6px;
 
       h4 {
         @include heading-font;
         margin: 0;
         color:$white;
-
       }
     }
   }
 
   * {
     z-index: 2;
+  }
+
+  h3.section-subheading {
+    margin-bottom:40px;
   }
 }
 
