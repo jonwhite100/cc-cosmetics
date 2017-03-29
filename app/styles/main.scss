@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5, h6 {
     color: $gray;
 }
 
+.break-word {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
 
 
 // header and section
@@ -125,22 +129,23 @@ section {
 // // import the agency theme
 .logo-wrapper {
   padding: 0;
-//
-//   img {
-//     width: 50%;
+
+  img {
+    max-width: 90%;
 //
 //     @media(min-width:768px) {
 //       width:40%;
 //     }
 //
-//     @media(min-width:1024px) {
-//       width:initial;
-//       max-width:100%;
-//     }
+    @media(min-width:1024px) {
+      max-width:100%;
+    }
 //
 //     @media(min-width:1024px) {
 //       max-width:100%;
 //     }
+  }
+
   .intro-lead-in {
     background-color: $gray;
     color: $white;
@@ -151,11 +156,7 @@ section {
   }
 
 }
-//
 
-//
-// }
-//
 .banner-image {
   border-bottom: 8px solid $brand-primary;
   border-top: 8px solid $brand-primary;
@@ -289,3 +290,82 @@ section {
 // label.h4 {
 //   color: $white;
 // }
+
+// Contact Section
+section#contact {
+  background-color: $gray-darker;
+
+  .section-heading,
+  .section-subheading,
+  label.h4 {
+    color: white;
+  }
+
+  label.h4 {
+    display: block;
+    text-align: left;
+  }
+//     .form-group {
+//         margin-bottom: 25px;
+//         input,
+//         textarea {
+//             padding: 20px;
+//         }
+//         input.form-control {
+//             height: auto;
+//         }
+//         textarea.form-control {
+//             height: 236px;
+//         }
+//     }
+//     .form-control:focus {
+//         border-color: $theme-primary;
+//         box-shadow: none;
+//     }
+//     ::-webkit-input-placeholder {
+//        @include heading-font;
+//        font-weight: 700;
+//        color: $gray-lighter;
+//     }
+//     :-moz-placeholder { /* Firefox 18- */
+//        @include heading-font;
+//        font-weight: 700;
+//        color: $gray-lighter;
+//     }
+//     ::-moz-placeholder {  /* Firefox 19+ */
+//        @include heading-font;
+//        font-weight: 700;
+//        color: $gray-lighter;
+//     }
+//     :-ms-input-placeholder {
+//        @include heading-font;
+//        font-weight: 700;
+//        color: $gray-lighter;
+//     }
+//     .text-danger {
+//         color: $theme-danger;
+//     }
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+}
+
+
+// Footer
+footer {
+    padding: 25px 0;
+    text-align: center;
+    span.copyright {
+        line-height: 40px;
+        @include heading-font;
+        text-transform: none;
+    }
+    ul.quicklinks {
+        margin-bottom: 0;
+        line-height: 40px;
+        @include heading-font;
+        text-transform: none;
+    }
+}
