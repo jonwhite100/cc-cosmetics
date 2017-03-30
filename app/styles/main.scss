@@ -1,3 +1,5 @@
+
+
 $icon-font-path: '../fonts/';
 
 @import "variables.scss";
@@ -9,6 +11,40 @@ $icon-font-path: '../fonts/';
 @import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
+// buttons
+.btn-secondary {
+  @include button-variant(white, lighten($brand-secondary, 15%), $brand-secondary);
+  @include heading-font;
+  font-size: $font-size-h3 * 0.85;
+  text-transform: uppercase;
+  color: $white;
+  margin-top: 20px;
+}
+
+// tooltip
+.tooltip {
+  &.in {
+    opacity: 1;
+  }
+
+  .tooltip-inner {
+    @include heading-font;
+    background-color: $white;
+    border: 2px solid $brand-secondary;
+    color: $brand-secondary;
+
+    font-size: $font-size-h3 * 0.85;
+    text-transform: uppercase;
+    max-width:480px;
+    padding: 15px;
+  }
+
+  &.top {
+    .tooltip-arrow {
+      border-top-color: $brand-secondary;
+    }
+  }
+}
 
 // fonts
 h1, h2, h3, h4, h5, h6 {
@@ -27,10 +63,7 @@ section {
   text-align: center;
 
   h2.section-heading {
-    // font-weight: 700;
-//         font-size: 40px;
-//         margin-top: 0;
-//         margin-bottom: 15px;
+
   }
 
   h3.section-subheading {
@@ -39,22 +72,7 @@ section {
     font-weight: 400;
     text-transform: none;
     margin-bottom: 30px;
-//     }
-//
-//     .btn {
-//       &:hover,
-//       &:active,
-//       &:focus {
-//         color: $white;
-//         background-color: lighten($brand-primary, 10%);
-//       }
-//     }
   }
-//
-// @media(min-width:768px) {
-//     section {
-//         padding: 20px 0;
-//     }
 }
 
 #services {
@@ -63,27 +81,19 @@ section {
   }
 }
 
-
-//
-// .intro-text {
-//   padding-top: 30px;
-//   padding-bottom: 0px;
-//
-//
-// }
-//
 .intro-heading {
   @include heading-font;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 50px;
-  margin:0 10px;
+  font-size: 36px;
+  line-height: 40px;
+  margin:30px 10px 0;
   color: $gray;
 
   @media(min-width:768px) {
-    font-size: 70px;
-    line-height: 70px;
-    margin-bottom: 40px;
+    font-size: 50px;
+    line-height: 50px;
+    margin-top:40px;
+    margin-bottom: 0px;
   }
 }
 
@@ -94,71 +104,29 @@ section {
   margin-bottom: 25px;
 }
 
-
-//
-// @media(min-width:768px) {
-//   .intro-wrapper {
-//     padding-top: 20px;
-//     padding-bottom: 20px;
-//   }
-//
-//   .intro-lead-in {
-//     font-size: 40px;
-//     line-height: 40px;
-//     margin-bottom: 25px;
-//   }
-//   .intro-heading {
-//     @include heading-font;
-//     font-weight: 700;
-//     font-size: 75px;
-//     line-height: 75px;
-//     margin-bottom: 50px;
-//   }
-//
-//   .intro-text {
-//     .btn {
-//       margin-top:30px;
-//     }
-//   }
-// }
-//
-// // import the agency theme
 .logo-wrapper {
   padding: 0;
-//
-//   img {
-//     width: 50%;
-//
-//     @media(min-width:768px) {
-//       width:40%;
-//     }
-//
-//     @media(min-width:1024px) {
-//       width:initial;
-//       max-width:100%;
-//     }
-//
-//     @media(min-width:1024px) {
-//       max-width:100%;
-//     }
+
+  img {
+    max-width: 90%;
+
+    @media(min-width:1024px) {
+      max-width:100%;
+    }
+  }
+
   .intro-lead-in {
     background-color: $gray;
     color: $white;
     padding: 20px;
     margin: 30px 0 0 0;
-  //     width:auto;
-  //     text-align: center;
   }
 
 }
-//
 
-//
-// }
-//
 .banner-image {
-  border-bottom: 8px solid $brand-primary;
-  border-top: 8px solid $brand-primary;
+  border-bottom: 0px solid $brand-primary;
+  border-top: 0px solid $brand-primary;
   background-image: url('../images/img-home.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -223,6 +191,13 @@ section {
   margin: 0 0 15px;
   padding-top: 0;
   right: 0;
+
+  a:hover {
+    .service-caption {
+      background-color: lighten($brand-secondary, 15%);
+      background: linear-gradient(#364b66, #4f565e);
+    }
+  }
 }
 
 .service-caption {
@@ -242,17 +217,66 @@ section {
     color:$white;
   }
 }
+
+
+
+// Contact Section
+section#contact {
+  background-color: $gray-darker;
+  padding-bottom: 40px;
+
+  .section-heading,
+  .section-subheading,
+  label.h4 {
+    color: white;
+   }
+
+   h3 {
+     line-height: 1.4;
+   }
+
+   label.h4 {
+     text-align: left;
+     display: block;
+   }
+
+   a {
+     color: $white;
+     text-decoration: underline;
+
+     &:hover,
+     &:active,
+     &:focus {
+       color: darken($white, 10%);
+     }
+   }
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+}
+
+footer {
+  padding: 25px 0;
+  text-align: center;
+  span.copyright {
+    line-height: 40px;
+    @include heading-font;
+    text-transform: none;
+  }
+
+  ul.quicklinks {
+    margin-bottom: 0;
+    line-height: 40px;
+    @include heading-font;
+    text-transform: none;
+  }
+}
+
 //
 // #portfolio {
 //   .portfolio-item {
-//
-//     .portfolio-caption {
-
-//
-//
-//
-
-//     }
 //
 //     a:hover {
 //       .portfolio-caption {

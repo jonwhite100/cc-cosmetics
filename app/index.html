@@ -4,9 +4,15 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>cc cosmetics</title>
+    <title>Car Care Cosmetics: Accident and Smart Repair Centre</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- build:css styles/vendor.css -->
@@ -34,15 +40,18 @@
         <div class="row">
           <div class="col-sm-12">
             <img src="images/logo-web.png" alt="Car Care Cosmetics" />
-            <h2 class="intro-lead-in">British standard approved insurance repairs</h2>
+            <div class="intro-heading">Accident and Smart Repair Centre</div>
+            <!-- <h2 class="intro-lead-in">British standard approved insurance repairs</h2> -->
           </div>
         </div>
       </div>
     </header>
 
     <section>
-      <div class="row banner-image">
-
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 banner-image"> </div>
+        </div>
       </div>
     </section>
 
@@ -50,17 +59,18 @@
     <section id="introduction">
       <div class="container">
 
-        <div class="row intro-wrapper">
+        <!-- <div class="row intro-wrapper">
           <div class="col-sm-12">
             <div class="intro-text">
               <div class="intro-heading">Accident and Smart Repair Centre</div>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Bodyshop quality at mobile prices</h2>
-            <div class="intro-lead-in">Call <a href="tel:07799-643-261">07799 643 261</a> or email <a href="mailto:john@carcarecosmetics.co.uk">john@carcarecosmetics.co.uk</a>.</div>
+            <!-- <div class="intro-lead-in">Call <a href="tel:07799-643-261">07799 643 261</a> or email <a href="mailto:john@carcarecosmetics.co.uk">john@carcarecosmetics.co.uk</a>.</div> -->
+            <a href="tel:07799-643-261" class="btn btn-secondary" data-toggle="tooltip" title="Call now on 07799 643 261">Call Now</a>
           </div>
         </div>
       </div>
@@ -77,6 +87,16 @@
         <div class="row">
           <div class="col-md-4 col-sm-6 service-item">
             <div class="service-caption">
+              <h4>British Standard Approved Technicians</h4>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 service-item">
+            <div class="service-caption">
+              <h4>Insurance Approved Repairs</h4>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 service-item">
+            <div class="service-caption">
               <h4>Dents and Scratches</h4>
             </div>
           </div>
@@ -87,7 +107,7 @@
           </div>
           <div class="col-md-4 col-sm-6 service-item">
             <div class="service-caption">
-              <h4>Bumper Scuffs</h4>
+              <h4>Specialist Paint</h4>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 service-item">
@@ -107,22 +127,12 @@
           </div>
           <div class="col-md-4 col-sm-6 service-item">
             <div class="service-caption">
-              <h4>Plastic Bumper Repairs</h4>
+              <h4>Plastic Bumper Repairs (scuffs / holes / splits)</h4>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 service-item">
             <div class="service-caption">
-              <h4>Oven Baked Paint</h4>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 service-item">
-            <div class="service-caption">
-              <h4>Free Courtesy Car</h4>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 service-item">
-            <div class="service-caption">
-              <h4>Collection and Delivery</h4>
+              <h4>Free Courtesy Car / Collection and Delivery</h4>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 service-item">
@@ -154,11 +164,36 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Please fill out the form below.</h3>
+            <h3 class="section-subheading text-muted">
+              Unit 5, Abercrombie Industrial Estate, Abercrombie Avenue, High Wycombe HP12 3BW
+              <br />
+              Call <a href="tel:07799-643-261">07799 643 261</a> or email <a href="mailto:john@carcarecosmetics.co.uk">john@carcarecosmetics.co.uk</a>
+            </h3>
+
+            <div class="col-lg-12">
+              <div id="map"></div>
+              <p><a href="https://www.google.com/maps?saddr=My+Location&daddr=5+Abercrombie+Avenue+Industrial+Estate+Abercromby+Ave+High+Wycombe+HP12+3AX" target="_blank">Get directions</a></p>
+                <script>
+                  function initMap() {
+                    var carCareLocation = {lat: 51.6341402, lng: -0.7694189};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 12,
+                      center: carCareLocation
+                    });
+
+                    var marker = new google.maps.Marker({
+                      position: carCareLocation,
+                      map: map
+                    });
+                  }
+                </script>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZkgopNS2rNKLl6EwhHuqQtWil8botw_U&callback=initMap"> </script>
+            </div>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-lg-12">
+            <h3 class="section-subheading text-muted">Please fill out the form below.</h3>
             <form role="form" id="contactForm" data-toggle="validator" class="shake">
               <div class="row">
                 <div class="form-group col-sm-4">
@@ -187,7 +222,7 @@
               <div class="clearfix"></div>
             </form>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
