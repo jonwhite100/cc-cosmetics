@@ -68,17 +68,21 @@
 
 @mixin serif-font {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $gray;
 }
 
 @mixin script-font {
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  color: $gray;
 }
 
 @mixin body-font {
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $gray;
 }
 
 @mixin heading-font {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $gray;
   text-transform: uppercase;
 }
