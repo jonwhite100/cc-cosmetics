@@ -218,17 +218,28 @@ section {
   }
 }
 
+// modal
+.modal-body {
+  h4 {
+    color: $brand-primary;
+    font-size:$font-size-h4 * 0.75;
+  }
 
+  img {
+    max-width: 100%;
+
+  }
+}
 
 // Contact Section
 section#contact {
-  background-color: $gray-darker;
+//  background-color: $gray-darker;
   padding-bottom: 40px;
 
   .section-heading,
   .section-subheading,
   label.h4 {
-    color: white;
+  //  color: white;
    }
 
    h3 {
@@ -241,13 +252,13 @@ section#contact {
    }
 
    a {
-     color: $white;
-     text-decoration: underline;
+    // color: $white;
+  // text-decoration: underline;
 
      &:hover,
      &:active,
      &:focus {
-       color: darken($white, 10%);
+    //   color: darken($white, 10%);
      }
    }
 }
@@ -273,43 +284,3 @@ footer {
     text-transform: none;
   }
 }
-
-//
-// #portfolio {
-//   .portfolio-item {
-//
-//     a:hover {
-//       .portfolio-caption {
-//         background-color: lighten($brand-secondary, 15%);
-//         background: linear-gradient(#364b66, #4f565e);
-//       }
-//     }
-//   }
-//
-//   * {
-//     z-index: 2;
-//   }
-//
-//   h3.section-subheading {
-//     margin-bottom:40px;
-//   }
-// }
-//
-// @media(min-width:767px) {
-//   #portfolio {
-//     .portfolio-item {
-//       margin: 0 0 30px;
-//     }
-//   }
-// }
-//
-// // contact form-group
-// #contact {
-//   h3.section-subheading {
-//     color:$white;
-//   }
-// }
-//
-// label.h4 {
-//   color: $white;
-// }
